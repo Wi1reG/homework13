@@ -55,7 +55,6 @@ public class Gryffindor extends hogwarts {
         return sum;
 
 
-
     }
 
     public static void equals(Gryffindor student1, Gryffindor student2) {

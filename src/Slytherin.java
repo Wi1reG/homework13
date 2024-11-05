@@ -1,4 +1,4 @@
-public class Slytherin extends hogwarts{
+public class Slytherin extends hogwarts {
 
     private int cunning;
     private int determination;
@@ -74,7 +74,6 @@ public class Slytherin extends hogwarts{
         int sum = 0;
         sum = this.cunning + this.determination + this.ambition + this.resourcefulness + this.lustForPower;
         return sum;
-
 
 
     }

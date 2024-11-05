@@ -56,7 +56,6 @@ public class Hufflepuff extends hogwarts {
         return sum;
 
 
-
     }
 
     public static void equals(Hufflepuff student1, Hufflepuff student2) {

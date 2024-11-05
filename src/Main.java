@@ -5,7 +5,7 @@ public class Main {
 
         Gryffindor[] gryffindors = {
 
-                new Gryffindor(100, 100, "Гарри", "Поттер", 90, 90, 90),
+                new Gryffindor(90, 100, "Гарри", "Поттер", 90, 90, 90),
                 new Gryffindor(100, 100, "Гермиона", "Грейнджер ", 100, 100, 100),
                 new Gryffindor(100, 100, "Рон ", "Уизли ", 100, 100, 100)
 
@@ -44,6 +44,7 @@ public class Main {
         Hufflepuff.equals(hufflepuffs[0],hufflepuffs[1]);
         Kogtevran.equals(kogtevrans[0], kogtevrans[1]);
         Slytherin.equals(slytherins[0],slytherins[1]);
+        hogwarts.equals(gryffindors[0], slytherins[0]);
 
 
     }

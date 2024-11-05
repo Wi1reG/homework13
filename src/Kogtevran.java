@@ -1,36 +1,16 @@
 public class Kogtevran extends hogwarts{
 
-    private String name;
-    private String surname;
     private int smart;
     private int wise;
     private int witty;
     private int creation;
 
     public Kogtevran(int power, int transgress, String surname, String name, int smart, int wise, int witty, int creation) {
-        super(power, transgress);
-        this.name = name;
-        this.surname = surname;
+        super(power, transgress, name, surname);
         this.smart = smart;
         this.wise = wise;
         this.witty = witty;
         this.creation = creation;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public int getSmart() {
@@ -68,8 +48,8 @@ public class Kogtevran extends hogwarts{
     @Override
     public String toString() {
         return "Kogtevran{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
+                "name='" + getName() + '\'' +
+                ", surname='" + getSurname() + '\'' +
                 ", smart=" + smart +
                 ", wise=" + wise +
                 ", witty=" + witty +
@@ -93,9 +73,9 @@ public class Kogtevran extends hogwarts{
         int sum1 = student1.getSumScore();
         int sum2 = student2.getSumScore();
         if (sum1 > sum2) {
-            System.out.println(student1.name + " лучше когтевранец чем " + student2.name);
+            System.out.println(student1.getName() + " лучше когтевранец чем " + student2.getName());
         } else if (sum1 < sum2) {
-            System.out.println(student2.name + " лучше когтевранец чем " + student1.name);
+            System.out.println(student2.getName() + " лучше когтевранец чем " + student1.getName());
         } else {
             System.out.println("студенты равны");
 

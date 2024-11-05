@@ -1,7 +1,5 @@
 public class Slytherin extends hogwarts{
 
-    private String name;
-    private String surname;
     private int cunning;
     private int determination;
     private int ambition;
@@ -9,30 +7,12 @@ public class Slytherin extends hogwarts{
     private int lustForPower;
 
     public Slytherin(int power, int transgress, String name, String surname, int cunning, int determination, int ambition, int resourcefulness, int lustForPower) {
-        super(power, transgress);
-        this.name = name;
-        this.surname = surname;
+        super(power, transgress, name, surname);
         this.cunning = cunning;
         this.determination = determination;
         this.ambition = ambition;
         this.resourcefulness = resourcefulness;
         this.lustForPower = lustForPower;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public int getDetermination() {
@@ -78,8 +58,8 @@ public class Slytherin extends hogwarts{
     @Override
     public String toString() {
         return "Slytherin{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
+                "name='" + getName() + '\'' +
+                ", surname='" + getSurname() + '\'' +
                 ", cunning=" + cunning +
                 ", determination=" + determination +
                 ", ambition=" + ambition +
@@ -104,9 +84,9 @@ public class Slytherin extends hogwarts{
         int sum1 = student1.getSumScore();
         int sum2 = student2.getSumScore();
         if (sum1 > sum2) {
-            System.out.println(student1.name + " лучше слизеринец чем " + student2.name);
+            System.out.println(student1.getName() + " лучше слизеринец чем " + student2.getName());
         } else if (sum1 < sum2) {
-            System.out.println(student2.name + " лучше слизеринец чем " + student1.name);
+            System.out.println(student2.getName() + " лучше слизеринец чем " + student1.getName());
         } else {
             System.out.println("студенты равны");
 

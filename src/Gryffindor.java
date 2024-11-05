@@ -1,35 +1,16 @@
 public class Gryffindor extends hogwarts {
 
-    private String name;
-    private String surname;
     private int nobility;
     private int honor;
     private int bravery;
 
     public Gryffindor(int power, int transgress, String name, String surname, int honor, int nobility, int bravery) {
-        super(power, transgress);
-        this.name = name;
-        this.surname = surname;
+        super(power, transgress, name, surname);
         this.honor = honor;
         this.nobility = nobility;
         this.bravery = bravery;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
 
     public int getNobility() {
         return nobility;
@@ -58,8 +39,8 @@ public class Gryffindor extends hogwarts {
     @Override
     public String toString() {
         return "Gryffindor{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
+                "name='" + getName() + '\'' +
+                ", surname='" + getSurname() + '\'' +
                 ", nobility=" + nobility +
                 ", honor=" + honor +
                 ", bravery=" + bravery +
@@ -82,9 +63,9 @@ public class Gryffindor extends hogwarts {
         int sum1 = student1.getSumScore();
         int sum2 = student2.getSumScore();
         if (sum1 > sum2) {
-            System.out.println(student1.name + " лучше грифиндорец чем " + student2.name);
+            System.out.println(student1.getName() + " лучше грифиндорец чем " + student2.getName());
         } else if (sum1 < sum2) {
-            System.out.println(student2.name + " лучше грифиндорец чем " + student1.name);
+            System.out.println(student2.getName() + " лучше грифиндорец чем " + student1.getName());
         } else {
             System.out.println("студенты равны");
 
